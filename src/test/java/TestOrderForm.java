@@ -10,7 +10,7 @@ public class TestOrderForm {
 
   @Test
   void shouldSubmitRequest(){
-    open("http://localhost:9999");
+    open("http://localhost:8080");
     SelenideElement form = $("form");
     form.$("[data-test-id=name] input").setValue("Василий Бонч-Бруевич");
     form.$("[data-test-id=phone] input").setValue("+79269998888");
