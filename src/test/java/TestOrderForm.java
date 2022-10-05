@@ -10,11 +10,11 @@ public class TestOrderForm {
 
   @Test
   void shouldSubmitRequest(){
-    open("http://localhost:8080");
+    open("http://localhost:9999");
     SelenideElement form = $("form");
     form.$("[data-test-id=name] input").setValue("Василий Бонч-Бруевич");
     form.$("[data-test-id=phone] input").setValue("+79269998888");
-    form.$("[data-test-id=agreement").click();
+    form.$("[data-test-id=agreement]").click();
     form.$(By.className("button")).click();
     $("[data-test-id=order-success]").shouldHave(exactText("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
   }
